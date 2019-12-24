@@ -20,3 +20,16 @@ after_success:
   - docker push carrola7/multi-nginx
   - docker push carrola7/multi-server
   - docker push carrola7/multi-worker
+
+deploy:
+  edge: true
+  provider: elasticbeanstalk
+  region: eu-west-1
+  app: multi-docker
+  env: MultiDocker-env
+  bucket_name: elasticbeanstalk-eu-west-1-548392745538
+  bucket_path: docker-multi
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
