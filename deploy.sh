@@ -7,7 +7,7 @@ docker push carrola7/multi-server:latest
 docker push carrola7/multi-server:$SHA
 docker push carrola7/multi-worker:latest
 docker push carrola7/multi-worker:$SHA
-kubectl appy -f k8s
+kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=carrola7/multi-server:$SHA
 kubectl set image deployments/client-deployment client=carrola7/multi-client:$SHA
 kubectl set image deployments/worker-deployment worker=carrola7/multi-worker:$SHA
