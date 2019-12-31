@@ -1,6 +1,6 @@
 docker build -t carrola7/multi-client:latest -t carrola7/multi-client:$SHA -f ./client/Dockerfile ./client
-docker build -t carrola7/multi-server -t carrola7/multi-server:$SHA -f ./server/Dockerfile ./server
-docker build -t carrola7/multi-worker -t carrola7/multi-workder:$SHA -f ./worker/Dockerfile ./worker
+docker build -t carrola7/multi-server:latest -t carrola7/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t carrola7/multi-worker:latest -t carrola7/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 docker push carrola7/multi-client:latest
 docker push carrola7/multi-client:$SHA
 docker push carrola7/multi-server:latest
